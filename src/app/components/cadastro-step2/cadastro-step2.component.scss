@@ -1,0 +1,53 @@
+.title {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 48px;
+  color: #262626;
+  text-align: start;
+}
+
+.form-cadastro-ultima-linha {
+  margin-bottom: 40px;
+}
+
+.button-adicionar {
+  font-family: 'FS Lucas Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 20px;
+  color: #262626;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-align: end;
+}
+
+.button-adicionar-exibido {
+  background-color: #ffffff;
+  color: #8a8a8a;
+  cursor: default;
+}
+
+.separador-item-adicional {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 16px;
+}
+
+.button-remover {
+  margin-top: 20px;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+
+.label-padrao {
+  font-family: 'FS Lucas Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #262626;
+  text-transform: uppercase;
+}

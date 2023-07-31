@@ -1,0 +1,32 @@
+.botao-stepper {
+  color: #262626;
+  background-color: #ffffff;
+  font-family: 'FS Lucas Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  transition: all 200ms ease-in-out;
+  letter-spacing: 0.5px;
+  width: auto !important;
+  min-width: 43px;
+  padding: 12px 15px;
+  max-height: 43px;
+}
+
+.selecionado-stepper {
+  background-color: #262626;
+  color: #ffffff;
+  font-weight: bold !important;
+}
+
+.botao-stepper:hover {
+  background-color: #262626;
+  color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+  .botao-stepper {
+    min-width: 00%;
+    margin-bottom: 1em;
+  }
+}

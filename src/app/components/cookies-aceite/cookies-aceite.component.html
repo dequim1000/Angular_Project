@@ -1,0 +1,29 @@
+<div class="cookies-alert" *ngIf="exibirAviso()">
+  <div class="cookies-row row">
+    <div class="col-12 col-lg-7 col-md-6 cookies-text">
+      <p>
+        {{ (aviso$ | async)?.textoAviso }}
+        <a [href]="(aviso$ | async)?.linkPolitica" *ngIf="(aviso$ | async)?.linkPolitica">
+          <span class="cookies-link">Política de Cookies</span>
+        </a>
+      </p>
+    </div>
+    <div class="col-12 col-lg-5 col-md-6">
+      <div class="cookies-buttons-row row d-inline-flex justify-content-center align-items-center">
+        <app-botao
+          class="me-1"
+          [texto]="(aviso$ | async)?.textoBotaoRejeita || ''"
+          (click)="rejeitaCookies()"
+          [disabled]="botaoDesabilitado()"></app-botao>
+        <app-botao
+          class="me-1"
+          [texto]="(aviso$ | async)?.textoBotaoAceita || ''"
+          (click)="aceitaCookies()"
+          [disabled]="botaoDesabilitado()"></app-botao>
+      </div>
+    </div>
+  </div>
+  <div class="cookies-close-button">
+    <button type="button" class="btn" label="close" (click)="rejeitaCookies()"></button>
+  </div>
+</div>

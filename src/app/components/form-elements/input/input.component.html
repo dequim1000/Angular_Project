@@ -1,0 +1,20 @@
+<div class="position-relative">
+  <label [ngClass]="{ 'label-padrao-required': checkIfRequired() }" [for]="fieldName" class="label-padrao mt-4">{{
+    label
+  }}</label>
+  <input
+    [type]="type"
+    class="form-control input-padrao mt-1"
+    [name]="fieldName"
+    [id]="fieldName"
+    [mask]="mascara"
+    [thousandSeparator]="mascaraSeparadorMilhar"
+    [decimalMarker]="mascaraSeparadorDecimal"
+    [dropSpecialCharacters]="mascaraDropSpecialChar"
+    [required]="required"
+    [value]="value"
+    [disabled]="isDisabled"
+    (input)="handleEvent($event)"
+    (blur)="onBlurInput($event)" />
+  <app-field-erros [formFieldName]="fieldName" [formField]="formField"></app-field-erros>
+</div>

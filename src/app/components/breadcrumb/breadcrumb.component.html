@@ -1,0 +1,25 @@
+<ol class="container breadcrumb d-flex justify-content-center justify-content-lg-start">
+  <li *ngFor="let breadcrumb of breadcrumbs; let i = index">
+    <a
+      *ngIf="i + 1 != breadcrumbs.length; else lastItem"
+      [routerLink]="breadcrumb.url"
+      routerLinkActive="router-link-active">
+      {{ breadcrumb.label }}
+      <svg
+        class="breadcrumb-arrow"
+        xmlns="http://www.w3.org/2000/svg"
+        style="margin: -2px 0 0 10px; opacity: 0.5"
+        width="12"
+        height="12"
+        viewBox="0 0 12 12">
+        <path
+          fill="#262626"
+          fill-rule="evenodd"
+          d="M7.39 1.61L11.78 6l-.53.53v.095h-.095L7.39 10.39l-.53-.53 3.234-3.235H.75v-1h9.594L6.86 2.14l.53-.53z"></path>
+      </svg>
+    </a>
+    <ng-template #lastItem>
+      <span>{{ breadcrumb.label }}</span>
+    </ng-template>
+  </li>
+</ol>

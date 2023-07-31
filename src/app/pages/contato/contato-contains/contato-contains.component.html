@@ -1,0 +1,32 @@
+<div class="container pe-lg-0 mb-5">
+  <div class="row">
+    <div class="col-12 p-lg-0">
+      <h2 class="sessao-informativa-title">Contato</h2>
+      <app-separador></app-separador>
+      <div class="d-flex justify-content-center mt-5 mb-5">
+        <img class="contato-mapa" src="/assets/images/mapa.webp" alt="Imagem mapa" />
+      </div>
+      <div class="row contato-info" *ngIf="contatos">
+        <div
+          *ngFor="let contato of contatos; let i = index"
+          [ngClass]="'col-lg-' + 12 / contatos.length"
+          class="col-sm-12 p-0 p-lg-1 mb-5 mb-lg-0">
+          <h3 class="contato-title">{{ contato.nome }}</h3>
+          <span class="contato-subtitle">{{ contato.produto }}</span>
+          <div class="contato-content">
+            <img src="/assets/icons/phone_icon.svg" alt="Icone telefone" width="18px" height="18px" />
+            <span class="contato-content-text">{{ contato.telefone }}</span>
+          </div>
+          <div class="contato-content">
+            <img src="/assets/icons/cellphone_icon.svg" alt="Icone celular" width="18px" height="18px" />
+            <span class="contato-content-text">{{ contato.celular }}</span>
+          </div>
+          <div class="contato-content">
+            <img src="/assets/icons/email_icon.svg" alt="Icone email" width="18px" height="18px" />
+            <span class="contato-content-text">{{ contato.email }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

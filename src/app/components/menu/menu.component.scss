@@ -1,0 +1,160 @@
+.menu-container {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  max-width: 100%;
+  padding: 0;
+}
+.bg-dark {
+  background-color: #262626 !important;
+  height: 42px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  height: 100%;
+}
+
+.lista-menu {
+  margin: 0;
+  padding: 0;
+  height: 42px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.logo {
+  width: 100%;
+}
+
+.link-menu {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.itens-menu {
+  height: 42px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.itens-menu::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 4px;
+  background: #ffffff;
+}
+
+.itens-menu:hover::after {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+.separador {
+  border: 0.5px solid #676767;
+  height: 30px;
+}
+
+.btn-cadastro {
+  background: linear-gradient(90deg, #11e0df -18.49%, #6973ed 100%);
+  border-radius: 1px;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  @media (max-width: 992px) {
+    height: 40px;
+  }
+  a {
+    color: #ffffff;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.menu {
+  vertical-align: baseline;
+  list-style-type: none;
+}
+
+.sub-item {
+  width: 354px;
+  height: 44px;
+  border-bottom: 1px solid rgba(38, 38, 38, 0.5);
+  opacity: 0.5;
+}
+
+.dropdown-custom {
+  position: relative;
+  display: inline-block;
+  &-content {
+    display: none;
+    position: absolute;
+    left: -12px;
+    top: 34px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: 100vw;
+    .dropdown-custom-item {
+      color: #000000;
+      font-weight: 600;
+      font-size: 12px;
+      padding: 12px 16px;
+      margin: 0 12px;
+      text-decoration: none;
+      display: block;
+    }
+    @media (max-width: 992px) {
+      right: 0;
+      margin: auto;
+    }
+  }
+  &-item:not(:nth-child(4)) {
+    border-bottom: 1px solid rgba(38, 38, 38, 0.2);
+  }
+}
+
+.dropdown-custom-content {
+  display: block;
+}
+.dropdown-custom-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.showMenu {
+  display: block;
+}
+
+.dropbtn {
+  border: none;
+  background-color: transparent;
+}
+.dropdown-custom:hover .dropbtn {
+  background-color: transparent;
+}
+
+app-dropdown-menu {
+  display: block;
+  padding: 0px;
+}

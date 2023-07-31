@@ -1,0 +1,29 @@
+{
+  "bannerVideo": {
+    "titulo": "Gás",
+    "textoModal": "Assim como as demais mesas da Tullett Prebon no mundo, a nossa mesa de gás no Brasil está comprometida com a isenção e a imparcialidade em todas as operações, atuando como uma terceira parte totalmente focada no encontro entre compradores e vendedores. Atuamos em todo o mundo levando maior liquidez e melhores condições para o mercado e aqui no Brasil iremos atuar da mesma forma e contribuindo para a abertura do mercado de gás.",
+    "link": "https://cdn.jwplayer.com/videos/TKFLzHEi-Mm8CL0x4.mp4"
+  },
+  "produtosServico": {
+    "tituloProdutos": "Conheça outros Produtos e Serviços",
+    "cards": [
+      {
+        "titulo": "Energia",
+        "img": "assets/images/produtos_energia.webp",
+        "url": "/home/produtos/energia"
+      },
+      {
+        "titulo": "Compensação de Emissões",
+        "img": "assets/images/wild_cat.webp",
+        "url": "/home/produtos/emissao"
+      }
+    ]
+  },
+  "sessaoInformativa": [
+    {
+      "titulo": "Gás Natural",
+      "descricao": "O Gás natural Liquefeito é um combustível de origem fóssil e é classificado como a terceira fonte energética mais importante do mundo. A Tullett Prebon reconhecendo a importância deste combustível, possui escritórios em diversos países prontos para atenderem qualquer demanda de nossos clientes. Iremos buscar esse caminho aqui no Brasil também.",
+      "urlImg": "/assets/images/produtos_gas.webp"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+.input-padrao {
+  border: 1px solid #c6cace;
+  border-radius: 0%;
+}
+
+.label-padrao {
+  font-family: 'FS Lucas Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #262626;
+  text-transform: uppercase;
+}
+
+.label-padrao-required {
+  &::after {
+    content: '*';
+    color: red;
+    font-size: 20px;
+  }
+}

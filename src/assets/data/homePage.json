@@ -1,0 +1,29 @@
+{
+  "bannerVideo": {
+    "titulo": "A Tullett Prebon é uma das principais corretoras do mundo",
+    "textoModal": "Conectamos clientes de maneira transparente e responsável nos mercados financeiros, de energia e de commodities em todo o mundo. Ao combinar o know-how de nosso time com a tecnologia mais recente, melhoramos o acesso ao mercado, tranparência de preços, execução comercial, liquidez e fluxo de informações.",
+    "link": "https://cdn.jwplayer.com/videos/TKFLzHEi-Mm8CL0x4.mp4",
+    "saibaMaisLink": "/home/quem-somos"
+  },
+  "video": "https://cdn.jwplayer.com/videos/TKFLzHEi-Mm8CL0x4.mp4",
+  "produtosServico": {
+    "tituloProdutos": "Produtos e Serviços",
+    "cards": [
+      {
+        "titulo": "Energia",
+        "img": "assets/images/produtos_energia.webp",
+        "url": "/home/produtos/energia"
+      },
+      {
+        "titulo": "Gás",
+        "img": "assets/images/produtos_gas.webp",
+        "url": "/home/produtos/gas"
+      },
+      {
+        "titulo": "Compensação de Emissões",
+        "img": "assets/images/wild_cat.webp",
+        "url": "/home/produtos/emissao"
+      }
+    ]
+  }
+}

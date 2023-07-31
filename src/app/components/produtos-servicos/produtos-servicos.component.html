@@ -1,0 +1,27 @@
+<div class="container mb-5 p-sm-0" *ngIf="produtosServicos">
+  <span class="title">{{ produtosServicos.tituloProdutos }}</span>
+  <app-separador></app-separador>
+  <div class="produtos d-flex row gx-2 mt-5">
+    <div
+      class="produto"
+      [ngClass]="'col-12 mt-5  mt-lg-0 col-lg-' + 12 / produtosServicos.cards.length"
+      *ngFor="let card of produtosServicos.cards">
+      <a class="produto-img-div" [href]="card.url">
+          <div>
+            <img
+              width="100%"
+              [src]="card.img"
+              class="produto-img"
+              alt="Imagem do card {{ produtosServicos.cards.length }}" />
+          </div>
+          <div class="produto-body">
+            <span class="produto-title">{{ card.titulo }}</span>
+            <div class="d-flex align-items-center produto-saibamais">
+              <a [href]="card.url" class="produto-text m-0">Saiba Mais</a>
+              <img class="ms-2" src="assets/icons/arrow_right.svg" alt="Icone seta para direita" />
+            </div>
+          </div>
+      </a>
+    </div>
+  </div>
+</div>

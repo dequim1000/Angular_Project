@@ -1,0 +1,8 @@
+<app-banner-video [bannerVideo]="(productsPage$ | async)?.bannerVideo" [isFullScreen]="true"></app-banner-video>
+<app-breadcrumb></app-breadcrumb>
+<div *ngFor="let sessaoInformativa of (productsPage$ | async)?.sessaoInformativa; let i = index">
+  <app-sessao-informativa
+    [sessaoInformativa]="sessaoInformativa"
+    [posicao]="i % 2 == 0 ? 'right' : 'left'"></app-sessao-informativa>
+</div>
+<app-produtos-servicos [produtosServicos]="(productsPage$ | async)?.produtosServico"></app-produtos-servicos>

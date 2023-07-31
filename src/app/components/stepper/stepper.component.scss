@@ -1,0 +1,49 @@
+.center {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 0px;
+}
+
+.center2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+.stepper {
+  right: 0;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-bottom: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.tracejados {
+  margin: 8px 15px !important;
+}
+
+.label1 {
+  margin-right: 33px !important;
+  margin-left: 17px !important;
+  font-size: 14px;
+}
+
+.label2 {
+  font-size: 14px;
+}
+
+.label3 {
+  margin-right: 36px !important;
+  margin-left: 51px !important;
+  font-size: 14px;
+}
+
+.selecionadoLabel {
+  font-weight: bold !important;
+}

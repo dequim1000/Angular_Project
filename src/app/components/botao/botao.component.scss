@@ -1,0 +1,70 @@
+app-botao {
+  max-height: 60px;
+  width: auto !important;
+}
+
+.botao {
+  color: #262626;
+  background-color: #ffffff;
+  font-family: 'FS Lucas Pro', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  transition: all 200ms ease-in-out;
+  letter-spacing: 0.5px;
+  width: auto !important;
+  min-width: 161px;
+  padding: 12px 40px;
+  max-height: 43px;
+}
+
+.botao-maior {
+  min-width: 221px !important;
+}
+
+.botao:hover {
+  background-color: #262626;
+  color: #ffffff;
+}
+
+.botao-seta {
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 0;
+  margin-top: 4px;
+  width: 16px;
+  height: 16px;
+  transition: all 200ms ease-in-out;
+}
+
+.botao-seta-imagem {
+  background-image: url('../../../assets/icons/arrow_right_dark.svg');
+}
+
+.botao:hover .botao-seta-imagem {
+  background-image: url('../../../assets/icons/arrow_right.svg');
+}
+
+.botao:hover .botao-seta-direita {
+  margin-left: 20px;
+}
+
+.botao:hover .botao-seta-esquerda {
+  margin-right: 20px;
+}
+
+.botao-seta-esquerda {
+  margin-right: 10px;
+  transform: scaleX(-1);
+}
+
+.botao-seta-direita {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .botao {
+    min-width: 00%;
+    margin-bottom: 1em;
+  }
+}

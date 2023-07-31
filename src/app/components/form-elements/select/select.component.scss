@@ -1,0 +1,25 @@
+.select-label {
+  font-family: 'FS Lucas Pro';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #262626;
+  text-transform: uppercase;
+}
+
+.select-label-required {
+  &::after {
+    content: '*';
+    color: red;
+    font-size: 20px;
+  }
+}
+
+.select-padrao {
+  font-family: 'FS Lucas Pro';
+  border: 1px solid #c6cace;
+  border-radius: 0%;
+  height: 37px;
+  font-size: 14px;
+}

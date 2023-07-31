@@ -1,0 +1,13 @@
+<span class="title">Upload de Documentos</span>
+<app-separador></app-separador>
+
+<div *ngFor="let i of arrayFor" class="row">
+  <div *ngFor="let j of arrayCol(i)" class="col-md-6 col-12">
+    <app-input-file
+      [id]="'arquivo-' + listaArquivos[j].tipoArquivo"
+      [label]="listaArquivos[j].descricao"
+      [required]="listaArquivos[j].obrigatorio"
+      [tipoArquivo]="listaArquivos[j].tipoArquivo"
+      #InputFile></app-input-file>
+  </div>
+</div>

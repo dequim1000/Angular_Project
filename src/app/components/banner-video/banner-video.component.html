@@ -1,0 +1,32 @@
+<div class="banner-container mb-5">
+  <div
+    [ngClass]="{
+      banner: isFullScreen,
+      'banner-ultrawide': !isFullScreen
+    }">
+    <div class="video-banner">
+      <div class="video-container">
+        <div class="inner">
+          <video *ngIf="bannerVideo?.link" class="video" height="720px" [muted]="'muted'" loop autoplay>
+            <source [src]="transform(bannerVideo?.link)" type="video/mp4" />
+            Vídeo indisponível
+          </video>
+        </div>
+      </div>
+    </div>
+    <div class="center container">
+      <h1 class="text">{{ bannerVideo?.titulo }}</h1>
+    </div>
+  </div>
+  <div class="container p-sm-0" *ngIf="isFullScreen">
+    <div class="quote quote-margin">
+      <h3 class="textoModal">{{ bannerVideo?.textoModal }}</h3>
+      <div *ngIf="bannerVideo?.saibaMaisLink" class="d-flex justify-content-center align-items-center mt-5">
+        <div class="separador-botao mx-2 mb-1"></div>
+        <app-botao [texto]="'SAIBA MAIS'" [setaDireita]="true" [botaoMaior]="true" (click)="redirecionarPara()">
+        </app-botao>
+        <div class="separador-botao mx-2 mb-1"></div>
+      </div>
+    </div>
+  </div>
+</div>

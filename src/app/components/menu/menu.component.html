@@ -1,0 +1,63 @@
+<div class="d-flex flex-column">
+  <div class="menu-container">
+    <nav class="d-flex navbar-expand-lg navbar-dark bg-dark justify-content-lg-center">
+      <div class="container-lg row nav-header nav align-items-center p-0 m-0 justify-content-lg-space-between">
+        <div class="col-2 d-lg-none d-flex">
+          <div class="dropdown-custom" id="dropdown-content">
+            <button class="dropbtn" (click)="onHamburguerClick()">
+              <img id="hamburguer" width="24px" height="24px" src="assets/icons/bars-solid.svg" />
+            </button>
+            <div class="dropdown-custom-content" id="dropdown-custom-content" *ngIf="isMenuHamburgerOpen">
+              <a class="dropdown-custom-item" routerLink="/home" href="/home">HOME</a>
+              <a class="dropdown-custom-item" routerLink="/home/quem-somos" href="/home/quem-somos">QUEM SOMOS</a>
+              <div class="row dropdown-custom-item pe-3">
+                <div class="d-flex justify-content-between p-0" (click)="showDropdown('produtos-responsivo')">
+                  <span class="p-0">PRODUTOS E SERVIÇOS</span>
+                  <img [src]="this.arrow" width="14px" height="12px" />
+                </div>
+                <app-dropdown-menu [customId]="'produtos-responsivo'"></app-dropdown-menu>
+              </div>
+              <a class="dropdown-custom-item" routerLink="/home/contato" href="/home/contato">CONTATO</a>
+              <div class="btn btn-primary btn-cadastro d-flex mx-2 mt-3 mb-3">
+                <a class="w-100" routerLink="/cadastro" role="button">Cadastrar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-8 col-xxl-6 col-xl-5 col-lg-4 d-flex d-lg-block ps-lg-0 justify-content-center justify-content-lg-start">
+          <a class="navbar-brand" href="#">
+            <img width="150px" height="22px" src="assets/images/logo_energy.svg" alt="" />
+          </a>
+        </div>
+        <div class="col-2 d-lg-none d-flex justify-content-end"></div>
+        <div
+          class="collapse navbar-collapse col-xxl-6 col-xl-7 col-lg-8 col-4 nav d-none d-lg-block p-0"
+          id="navbarNav">
+          <ul class="navbar-nav lista-menu">
+            <li class="nav-item me-5 itens-menu">
+              <a class="link-menu" routerLink="/home" routerLinkActive="selected">Home</a>
+            </li>
+            <li class="nav-item me-5 itens-menu">
+              <a class="link-menu" routerLink="/home/quem-somos" routerLinkActive="selected">Quem Somos</a>
+            </li>
+            <li
+              class="nav-item me-5 itens-menu"
+              (mouseenter)="showDropdown('produtos')"
+              (mouseleave)="showDropdown('produtos')">
+              <a class="link-menu">Produtos e Serviços</a>
+            </li>
+            <li class="nav-item me-5 itens-menu">
+              <a class="link-menu" routerLink="/home/contato" routerLinkActive="selected">Contato</a>
+            </li>
+            <div class="separador me-5"></div>
+            <li class="nav-item w-100 justify-content-end d-flex">
+              <a class="btn btn-primary btn-cadastro" routerLink="/cadastro" role="button">Cadastrar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <app-dropdown-menu class="d-flex" [customId]="'produtos'"></app-dropdown-menu>
+  </div>
+</div>

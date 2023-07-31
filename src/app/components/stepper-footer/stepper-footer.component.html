@@ -1,0 +1,19 @@
+<div class="row row-stepper-footer">
+  <div class="col-12 btn-group-stepper-footer d-flex justify-content-center align-items-center">
+    <div class="btn-group" role="group">
+      <app-botao
+        [texto]="textoBotao1"
+        [setaEsquerda]="setaBotao1"
+        [setaDireita]="false"
+        class="botao-stepper-footer"
+        (click)="clickBotao1($event)"></app-botao>
+
+      <app-botao
+        [texto]="textoBotao2"
+        [setaEsquerda]="false"
+        [setaDireita]="setaBotao2"
+        class="botao-stepper-footer"
+        (click)="clickBotao2($event)"></app-botao>
+    </div>
+  </div>
+</div>

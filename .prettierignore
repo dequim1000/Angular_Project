@@ -1,0 +1,21 @@
+**/.git
+**/node_modules
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Package Manager
+package.json
+package-lock.json
+yarn.lock
+
+# Angular-related
+/dist
+/coverage
+**/.angular
+**/assets/**/*

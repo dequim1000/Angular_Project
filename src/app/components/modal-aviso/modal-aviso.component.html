@@ -1,0 +1,34 @@
+<div
+  id="modal-aviso"
+  class="modal fade modal-aviso"
+  tabindex="-1"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  role="dialog"
+  aria-labelledby="modalTitleId"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm modal-aviso-dialog" role="document">
+    <div class="modal-content modal-aviso-content">
+      <div class="modal-header modal-aviso-header">
+        <div class="container">
+          <div class="row">
+            <span class="modal-aviso-title-text">{{ titulo }}</span>
+          </div>
+          <div class="row">
+            <app-separador class="modal-aviso-separador"></app-separador>
+          </div>
+        </div>
+        <div class="modal-close-button">
+          <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="modal-body modal-aviso-body" [ngClass]="classErro()">
+        {{ mensagem }}
+      </div>
+      <div class="modal-footer modal-aviso-footer d-flex justify-content-start">
+        <app-botao [botaoMaior]="false" [texto]="'FECHAR'" (click)="clickFechar($event)" data-bs-dismiss="modal">
+        </app-botao>
+      </div>
+    </div>
+  </div>
+</div>

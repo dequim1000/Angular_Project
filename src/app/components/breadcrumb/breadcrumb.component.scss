@@ -1,0 +1,32 @@
+.breadcrumb {
+  &-inner-container {
+    @media (max-width: 1024px) {
+      display: none;
+    }
+  }
+  a,
+  span {
+    color: #262626;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: capitalize;
+    letter-spacing: normal;
+    -webkit-font-smoothing: antialiased;
+    line-height: 22px;
+  }
+  a:hover,
+  span:hover :not(:last-child) {
+    text-decoration: underline;
+  }
+  li {
+    list-style: none;
+    float: left;
+    margin: 5px;
+  }
+  li:last-child {
+    margin-right: 20px;
+  }
+  li:last-child::after {
+    content: '';
+  }
+}

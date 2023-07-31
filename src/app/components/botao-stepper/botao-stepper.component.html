@@ -1,0 +1,8 @@
+<button
+  type="button"
+  class="botao-stepper d-flex justify-content-center align-items-center"
+  [ngClass]="{ 'selecionado-stepper': selecionado }"
+  (click)="onClick($event)"
+  [disabled]="disabled">
+  <span class="">{{ texto }}</span>
+</button>

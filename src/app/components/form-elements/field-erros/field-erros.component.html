@@ -1,0 +1,9 @@
+<ng-container *ngIf="formField?.dirty || formField.touched">
+  <div class="error-tooltip" [ngStyle]="customStyle" *ngIf="formField?.errors">
+    <div class="d-flex">
+      <img class="me-2" src="assets/icons/alert-icon.svg" />
+      <span *ngIf="formField.errors?.['required']">Preencha este campo.</span>
+      <span *ngIf="!formField.errors?.['required']">{{ displayErrorMessage() }}</span>
+    </div>
+  </div>
+</ng-container>

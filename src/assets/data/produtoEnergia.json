@@ -1,0 +1,34 @@
+{
+  "bannerVideo": {
+    "titulo": "Energia",
+    "textoModal": "A Tullett Prebon atua como broker no Mercado Livre de energia, intermediando negócios com as principais casas comercializadoras, geradores e consumidores, trazendo liquidez e transparência como uma terceira parte imparcial e independente. Conectamos compradores e vendedores, tanto para o mercado físico, como para o financeiro, com termos, swaps e opções.",
+    "link": "https://cdn.jwplayer.com/videos/TKFLzHEi-Mm8CL0x4.mp4"
+  },
+  "produtosServico": {
+    "tituloProdutos": "Conheça outros Produtos e Serviços",
+    "cards": [
+      {
+        "titulo": "Gás",
+        "img": "assets/images/produtos_gas.webp",
+        "url": "/home/produtos/gas"
+      },
+      {
+        "titulo": "Compensação de Emissões",
+        "img": "assets/images/wild_cat.webp",
+        "url": "/home/produtos/emissao"
+      }
+    ]
+  },
+  "sessaoInformativa": [
+    {
+      "titulo": "Mercado Físico",
+      "descricao": "Nossa mesa de energia física está focada em todos os produtos que o mercado já está acostumado desde seu início, nossas ferramentas e operações permitem que consumidores, comercializadoras e geradores dividam o mesmo ambiente e tenham acesso as mesmas condições de liquidez, preços e circunstancias de compra e venda de energia. Esse comportamento contribui de forma direta para aumentar a liquidez e a eficiência do mercado. Nós atuamos sempre como terceira parte, totalmente independente, mantendo o sigilo e a imparcialidade das partes e proporcionando as melhores estratégia para a entrada e a saída de posições para todos.",
+      "urlImg": "/assets/images/represa_hidro.webp"
+    },
+    {
+      "titulo": "Derivativos de Energia",
+      "descricao": "Derivativos são operações financeiras que possibilitam a tomada de posições em busca de resultado financeiro e também se proteger de possíveis oscilações de preços de um ativo (os chamados hedges). Neste caso o ativo é a energia elétrica. Nessas operações não há necessidade de se preocupar com a entrega física da energia pois são exclusivamente financeiras. Isto diminui o risco de cada operação pois as posições são tomadas com base apenas nas diferenças entre os valores negociados e as referências adotadas. Na prática, os derivativos são calculados pela diferença entre o preço de negociação e o preço de referência – na energia, podendo ser o PLD publicado pela CCEE. E por se tratar de um ativo mobiliário, a CVM obriga o registro dos derivativos em um ambiente autorizado, como a B3. Sendo uma instituição financeira, a Tullett Prebon realiza todo o processo de registro dos derivativos de seus clientes sem que precisem se preocupar com isso. É interessante ressaltar a flexibilidade das operações com derivativos; sejam elas através de termo, swap, opções ou ainda com a criação de operações totalmente customizadas e adequadas à necessidade de cada cliente. Lembramos que os derivativos de energia são de balcão e possuem suas negociações feitas de forma bilateral. Nas operações de derivativos de energia elétrica a Tullett Prebon conecta as partes interessadas e executa o processo de registro.",
+      "urlImg": "/assets/images/produtos_energia.webp"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+<button
+  [type]="tipo"
+  class="botao d-flex justify-content-center align-items-center"
+  [ngClass]="{ 'botao-maior': botaoMaior }"
+  [disabled]="disabled"
+  (click)="onClick($event)">
+  <div *ngIf="setaEsquerda" class="botao-seta botao-seta-imagem botao-seta-esquerda"></div>
+  <span class="">{{ texto }}</span>
+  <div *ngIf="setaDireita" class="botao-seta botao-seta-imagem botao-seta-direita"></div>
+</button>

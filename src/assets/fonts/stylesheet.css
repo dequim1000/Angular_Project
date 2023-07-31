@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'FS Lucas Pro';
+    src: local('FS Lucas Pro Black'), local('FSLucasPro-Black'),
+        url('FSLucasPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Lucas Pro SemiBd';
+    src: local('FS Lucas Pro SemiBd'), local('FSLucasPro-SemiBd'),
+
+        url('FSLucasPro-SemiBd.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Lucas Pro';
+    src: local('FS Lucas Pro Thin'), local('FSLucasPro-Thin'),
+        url('FSLucasPro-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Lucas Pro';
+    src: local('FS Lucas Pro Black Italic'), local('FSLucasPro-BlackItalic'),
+        url('FSLucasPro-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Lucas Pro';
+    src: local('FS Lucas Pro Italic'), local('FSLucasPro-Italic'),
+        url('FSLucasPro-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Lucas Pro';
+    src: local('FS Lucas Pro Regular'), local('FSLucasPro-Regular'),
+        url('FSLucasPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'FS Lucas Pro';
+    src: local('FS Lucas Pro Bold Italic'), local('FSLucasPro-BoldItalic'),
+        url('FSLucasPro-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Lucas Pro';
+    src: local('FS Lucas Pro Light'), local('FSLucasPro-Light'),
+        url('FSLucasPro-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Lucas Pro Med';
+    src: local('FS Lucas Pro Med'), local('FSLucasPro-Med'),
+        url('FSLucasPro-Med.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'FS Lucas Pro';
+    src: local('FS Lucas Pro Bold'), local('FSLucasPro-Bold'),
+        url('FSLucasPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+

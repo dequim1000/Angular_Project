@@ -1,0 +1,22 @@
+.container {
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  max-width: 100%;
+  padding: 0;
+}
+.bg-dark {
+  background-color: #262626 !important;
+  height: 42px;
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-left: 30px !important;
+}
+
+.nav {
+  height: 100%;
+}
+
+.container-branco {
+  margin-top: 42px;
+}

@@ -1,0 +1,95 @@
+<span class="title">Dados da Empresa</span>
+<app-separador></app-separador>
+
+<div class="form-group">
+    <form [formGroup]="form">
+        <div class="row">
+            <div class="col-lg-8 col-sm-12">
+                <app-input formControlName="razaoSocial" [fieldName]="'razaoSocial'"
+                    [label]="'Razão social completa'"></app-input>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <app-select formControlName="idClassificacao" [fieldName]="'idClassificacao'" [label]="'Classificação'"
+                    [dados$]="classificacaoObservable$"></app-select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-sm-12">
+                <app-input formControlName="cnpj" [fieldName]="'cnpj'" [label]="'CNPJ/ME'"
+                    [mascara]="mascaraCNPJ"></app-input>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <app-input formControlName="dataConstituicao" [fieldName]="'dataConstituicao'"
+                    [label]="'Data Constituição'" [type]="'date'"></app-input>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-12">
+                <app-input formControlName="cep" [fieldName]="'cep'" [label]="'CEP'" [mascara]="mascaraCEP"
+                    (blur)="onCEPBlur()"></app-input>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <app-input formControlName="cidade" [fieldName]="'cidade'" [label]="'Cidade'"
+                    [disabled]="true"></app-input>
+            </div>
+            <div class="col-lg-3 col-sm-12">
+                <app-input formControlName="estado" [fieldName]="'estado'" [label]="'Estado'"
+                    [disabled]="true"></app-input>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-7 col-sm-12">
+                <app-input formControlName="endereco" [fieldName]="'endereco'" [label]="'Endereço da Sede'"
+                    [disabled]="true"></app-input>
+            </div>
+            <div class="col-lg-2 col-sm-12">
+                <app-input formControlName="numero" [fieldName]="'numero'" [label]="'Número'"></app-input>
+            </div>
+            <div class="col-lg-3 col-sm-12">
+                <app-input formControlName="complemento" [fieldName]="'complemento'"
+                    [label]="'Complemento'"></app-input>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="title mt-4">Dados de Representante Legal</div>
+<app-separador></app-separador>
+<div class="form-group">
+    <form [formGroup]="form">
+        <div class="row" *ngFor="let i of exibirRepresentanteLegalAdicional; let primeiro = first">
+            <div class="col-12">
+                <div [ngClass]="{ 'separador-item-adicional': i > 1 }"></div>
+            </div>
+
+            <div class="col-lg-4 col-sm-12">
+                <app-input [formControlName]="campoRepresentanteLegalNome + i"
+                    [fieldName]="campoRepresentanteLegalNome + i" [label]="'Nome Completo'"></app-input>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <app-input [formControlName]="campoRepresentanteLegalCpf + i"
+                    [fieldName]="campoRepresentanteLegalCpf + i" [label]="'CPF/ME'" [mascara]="mascaraCPF"></app-input>
+            </div>
+            <div class="col-lg-4 col-sm-12">
+                <app-input [formControlName]="campoRepresentanteLegalEmail + i"
+                    [fieldName]="campoRepresentanteLegalEmail + i" [label]="'E-mail'"></app-input>
+            </div>
+
+            <div *ngIf="!primeiro" class="row justify-content-end pe-0">
+                <app-botao class="button-remover" [texto]="'REMOVER REPRESENTANTE'"
+                    (click)="removerRepresentanteLegal(i)">
+                </app-botao>
+            </div>
+        </div>
+
+        <div class="row form-cadastro-ultima-linha d-flex">
+            <div class="col-12">
+                <div [ngClass]="{ 'separador-item-adicional': separadorAdicionalRepresentanteLegal() }"></div>
+            </div>
+            <a class="button-adicionar" role="button" (click)="addRepresentanteLegal()"
+                [ngClass]="{ 'button-adicionar-exibido': maximoRepresentantesLegais() }">+ Adicionar
+                Representante
+                Legal</a>
+        </div>
+    </form>
+</div>
+<app-modal-aviso> </app-modal-aviso>

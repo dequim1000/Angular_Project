@@ -1,0 +1,39 @@
+<div class="container pe-lg-0 mb-5 mt-5">
+  <div class="row">
+    <div class="col-12 p-lg-0">
+      <h2 class="sessao-informativa-title">Fale Conosco</h2>
+      <app-separador></app-separador>
+      <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="form-group">
+        <div class="row">
+          <div class="col-sm-12 col-lg-6">
+            <app-input formControlName="nome" [fieldName]="'nome'" [label]="'Nome'"></app-input>
+            <app-input formControlName="email" [fieldName]="'email'" [label]="'Email Corporativo'"></app-input>
+            <app-input
+              formControlName="telefone"
+              [mascara]="'(00) 0000-0000||(00) 00000-0000'"
+              [fieldName]="'telefone'"
+              [label]="'Telefone'"></app-input>
+            <app-input formControlName="empresa" [fieldName]="'empresa'" [label]="'Empresa'"></app-input>
+            <app-select
+              formControlName="idInteresse"
+              [fieldName]="'idInteresse'"
+              [label]="'Interesse'"
+              [dados$]="interessesObservable$"></app-select>
+          </div>
+          <div class="col-sm-12 col-lg-6 mensagem-container">
+            <label for="formMensagem" class="label-padrao label-padrao-required mt-4">Mensagem</label>
+            <textarea formControlName="mensagem" class="form-control input-padrao mt-1" id="mensagem"> </textarea>
+            <app-field-erros
+              [customStyle]="{ top: '100%' }"
+              [formField]="this.formField('mensagem')"
+              [formFieldName]="'mensagem'"></app-field-erros>
+          </div>
+        </div>
+        <div class="row mt-4 d-flex justify-content-center justify-content-lg-start flex-lg-row-reverse">
+          <app-botao [texto]="'ENVIAR MENSAGEM'" [tipo]="'submit'" [disabled]="loading"></app-botao>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<app-modal-aviso (onClose)="fecharModal()"> </app-modal-aviso>

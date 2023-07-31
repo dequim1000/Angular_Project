@@ -1,0 +1,39 @@
+<div class="stepper">
+  <div class="center">
+    <app-botao-stepper
+      [texto]="textoStep1"
+      [selecionado]="selecionadoStep1"
+      (click)="clickStep1($event)"
+      [disabled]="enviando">
+    </app-botao-stepper>
+    <div class="tracejados">
+      <img height="1px" src="assets/icons/linha_tracejada.svg" alt="" />
+    </div>
+    <app-botao-stepper
+      [texto]="textoStep2"
+      [selecionado]="selecionadoStep2"
+      (click)="clickStep2($event)"
+      [disabled]="enviando">
+    </app-botao-stepper>
+    <div class="tracejados">
+      <img height="1px" src="assets/icons/linha_tracejada.svg" alt="" />
+    </div>
+    <app-botao-stepper
+      [texto]="textoStep3"
+      [selecionado]="selecionadoStep3"
+      (click)="clickStep3($event)"
+      [disabled]="enviando">
+    </app-botao-stepper>
+  </div>
+  <div class="center2">
+    <div>
+      <label class="label1" [ngClass]="{ selecionadoLabel: selecionadoStep1 }">{{ labelStep1 }}</label>
+    </div>
+    <div>
+      <label class="label2" [ngClass]="{ selecionadoLabel: selecionadoStep2 }">{{ labelStep2 }}</label>
+    </div>
+    <div>
+      <label class="label3" [ngClass]="{ selecionadoLabel: selecionadoStep3 }">{{ labelStep3 }}</label>
+    </div>
+  </div>
+</div>

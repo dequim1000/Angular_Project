@@ -1,0 +1,29 @@
+{
+  "bannerVideo": {
+    "titulo": "Emissão",
+    "textoModal": "Somos líderes mundiais em intermediação de negociações de créditos de carbono e certificados. Levamos a nossos clientes liquidez, de forma ágil e segura.",
+    "link": "https://cdn.jwplayer.com/videos/TKFLzHEi-Mm8CL0x4.mp4"
+  },
+  "produtosServico": {
+    "tituloProdutos": "Conheça outros Produtos e Serviços",
+    "cards": [
+      {
+        "titulo": "Energia",
+        "img": "assets/images/produtos_energia.webp",
+        "url": "/home/produtos/energia"
+      },
+      {
+        "titulo": "Gás",
+        "img": "assets/images/produtos_gas.webp",
+        "url": "/home/produtos/gas"
+      }
+    ]
+  },
+  "sessaoInformativa": [
+    {
+      "titulo": "Compensação de Emissões",
+      "descricao": "A Tullett Prebon leva sua experiência em intermediação de negociações em commodities também ao mercado de compensação de emissões de gases de efeito estufa. Nossas mesas de créditos de carbono estão presentes no Brasil, EUA, Inglaterra e Singapura e, dessa forma, as oportunidades são trabalhadas globalmente. Atuamos nos diversos standards e fontes e proporcionamos a nossos clientes liquidez e informações de mercado. Entre em contato e faça parte ativamente desse mercado em expansão.",
+      "urlImg": "/assets/images/wild_cat.webp"
+    }
+  ]
+}

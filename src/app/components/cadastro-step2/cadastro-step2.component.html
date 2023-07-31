@@ -1,0 +1,187 @@
+<div class="form-group">
+  <form [formGroup]="form">
+    <span class="title">Informações Financeiras</span>
+    <app-separador></app-separador>
+
+    <div class="row">
+      <div class="col-lg-8 col-sm-12">
+        <app-input
+          formControlName="patrimonioLiquido"
+          [fieldName]="'patrimonioLiquido'"
+          [label]="'Patrimônio Líquido (R$)'"
+          [mascara]="'separator.2'"
+          [mascaraSeparadorMilhar]="'.'"
+          [mascaraSeparadorDecimal]="','"
+          [mascaraDropSpecialChar]="true"
+          (blurCallback)="formataValor($event, 'patrimonioLiquido')"></app-input>
+      </div>
+      <div class="col-lg-4 col-sm-12">
+        <app-input
+          formControlName="dataBase"
+          [fieldName]="'dataBase'"
+          [label]="'Data Base'"
+          [type]="'date'"></app-input>
+      </div>
+    </div>
+    <div class="row form-cadastro-ultima-linha">
+      <div class="col-lg-5 col-sm-12">
+        <app-input
+          formControlName="responsavel"
+          [fieldName]="'responsavel'"
+          [label]="'Responsável pelo Faturamento'"></app-input>
+      </div>
+      <div class="col-lg-4 col-sm-12">
+        <app-input formControlName="emailResponsavel" [fieldName]="'emailResponsavel'" [label]="'E-mail'"></app-input>
+      </div>
+      <div class="col-lg-3 col-sm-12">
+        <app-input formControlName="telefoneResponsavel" [mascara]="'(00) 0000-0000||(00) 00000-0000'"
+            [fieldName]="'telefoneResponsavel'" [label]="'Telefone'"></app-input>
+      </div>
+    </div>
+
+    <div class="row d-flex">
+      <div class="col-sm-12">
+        <span class="title">Traders Autorizados à Operar em Nome do Cliente</span>
+      </div>
+    </div>
+    <app-separador></app-separador>
+    <div class="row" *ngFor="let i of exibirTraderAdicional; let primeiro = first">
+      <div class="col-12">
+        <div [ngClass]="{ 'separador-item-adicional': i > 1 }"></div>
+      </div>
+
+      <div class="col-lg-5 col-sm-12">
+        <app-input
+          [formControlName]="campoTraderNome + i"
+          [fieldName]="campoTraderNome + i"
+          [label]="'Nome Completo'"></app-input>
+      </div>
+      <div class="col-lg-3 col-sm-12">
+        <app-input
+          [formControlName]="campoTraderCpf + i"
+          [fieldName]="campoTraderCpf + i"
+          [label]="'CPF/ME'"
+          [mascara]="mascaraCPF"></app-input>
+      </div>
+      <div class="col-lg-4 col-sm-12">
+        <app-input
+          [formControlName]="campoTraderEmail + i"
+          [fieldName]="campoTraderEmail + i"
+          [label]="'E-mail'"></app-input>
+      </div>
+
+      <div *ngIf="!primeiro" class="row justify-content-end pe-0">
+        <app-botao class="button-remover" [texto]="'REMOVER TRADER'" (click)="removerTrader(i)"> </app-botao>
+      </div>
+    </div>
+
+    <div class="row form-cadastro-ultima-linha d-flex">
+      <div class="col-12">
+        <div [ngClass]="{ 'separador-item-adicional': separadorAdicionalTrader() }"></div>
+      </div>
+      <a
+        class="button-adicionar"
+        role="button"
+        (click)="addTrader()"
+        [ngClass]="{ 'button-adicionar-exibido': maximoTraders() }"
+        >+ Adicionar Traders Autorizados</a
+      >
+    </div>
+
+    <span class="title">Contrapartes Pré-Autorizadas</span>
+    <div class="col-sm-12" class="p-0 d-flex flex-direction-column align-items-center">
+      <input
+        id="radioFormulario"
+        formControlName="tipoCadastro"
+        name="tipoCadastro"
+        type="radio"
+        value="{{ tipoCadastroContraparteEnum.formulario }}"
+        (change)="changeTipoCadastroTraderContraparte($event)" />
+      <label class="label-padrao ms-1" for="radioFormulario">Formulário</label>
+      <input
+        id="radioPlanilha"
+        class="ms-2"
+        formControlName="tipoCadastro"
+        name="tipoCadastro"
+        type="radio"
+        value="{{ tipoCadastroContraparteEnum.planilha }}"
+        (change)="changeTipoCadastroTraderContraparte($event)" />
+      <label class="label-padrao ms-1" for="radioPlanilha">Planilha</label>
+    </div>
+    <app-separador></app-separador>
+
+    <div *ngIf="tipoCadastroContraParte == tipoCadastroContraparteEnum.formulario; else elsePlanilhaInput">
+      <div class="row" *ngFor="let i of exibirContraparteAdicional; let primeiro = first">
+        <div class="col-12">
+          <div [ngClass]="{ 'separador-item-adicional': i > 1 }"></div>
+        </div>
+
+        <div class="col-lg-3 col-sm-12">
+          <app-input
+            [formControlName]="campoContraparteNome + i"
+            [fieldName]="campoContraparteNome + i"
+            [label]="'Razão Social'"></app-input>
+        </div>
+        <div class="col-lg-3 col-sm-12">
+          <app-input
+            [formControlName]="campoContraparteCnpj + i"
+            [fieldName]="campoContraparteCnpj + i"
+            [label]="'CNPJ/ME'"
+            [mascara]="mascaraCNPJ"></app-input>
+        </div>
+        <div class="col-lg-2 col-sm-12">
+          <app-input
+            [formControlName]="campoContraparteLimite + i"
+            [fieldName]="campoContraparteLimite + i"
+            [label]="'Limite Financeiro'"
+            [mascara]="'separator.2'"
+            [mascaraSeparadorMilhar]="'.'"
+            [mascaraSeparadorDecimal]="','"
+            [mascaraDropSpecialChar]="true"
+            (blurCallback)="formataValor($event, campoContraparteLimite + i)"></app-input>
+        </div>
+        <div class="col-lg-2 col-sm-12">
+            <app-input
+              [formControlName]="campoContraparteLimiteVolume + i"
+              [fieldName]="campoContraparteLimiteVolume + i"
+              [label]="'Limite Volume (MWm)'"></app-input>
+          </div>
+        <div class="col-lg-2 col-sm-12">
+          <app-input
+            [formControlName]="campoContraparteLimiteMeses + i"
+            [fieldName]="campoContraparteLimiteMeses + i"
+            [label]="'Limite de Meses'"></app-input>
+        </div>
+
+        <div *ngIf="!primeiro" class="row justify-content-end pe-0">
+          <app-botao class="button-remover" [texto]="'REMOVER CONTRAPARTE'" (click)="removerContraparte(i)">
+          </app-botao>
+        </div>
+      </div>
+
+      <div class="row form-cadastro-ultima-linha">
+        <div class="col-12">
+          <div [ngClass]="{ 'separador-item-adicional': separadorAdicionalContraparte() }"></div>
+        </div>
+        <a
+          class="button-adicionar"
+          role="button"
+          (click)="addContraparte()"
+          [ngClass]="{ 'button-adicionar-exibido': maximoContrapartes() }"
+          >+ Adicionar Contrapartes Pré-Autorizadas</a
+        >
+      </div>
+    </div>
+    <ng-template #elsePlanilhaInput>
+      <div class="mt-4">
+        <app-botao (click)="downloadPlanilha()" [texto]="'Download planilha modelo'"></app-botao>
+        <app-input-file
+          [id]="'planilha-trader-contrapartes'"
+          [label]="'Planilha Contrapartes'"
+          [tipoArquivo]="0"
+          [accept]="'.csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel'"
+          #InputFile></app-input-file>
+      </div>
+    </ng-template>
+  </form>
+</div>

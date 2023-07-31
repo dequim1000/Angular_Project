@@ -1,0 +1,15 @@
+<div class="row">
+  <span class="input-file-label" [ngClass]="requiredClass()">{{ label }}</span>
+</div>
+<label [for]="id" class="input-file-name">
+  <span id="file-name" class="input-file-selected">{{ getNomeArquivo() }}</span>
+  <!-- <img src="../../../assets/icons/diretorio.svg" alt="arquivo" class="input-file-img"> -->
+  <div class="input-file-img"></div>
+</label>
+<input
+  [id]="id"
+  type="file"
+  class="input-file"
+  [accept]="accept"
+  [required]="required"
+  (change)="mudouArquivo($event.target)" />

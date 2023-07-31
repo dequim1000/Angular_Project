@@ -1,0 +1,18 @@
+<div class="position-relative">
+  <label
+    [ngClass]="{ 'select-label-required': checkIfRequired() }"
+    [for]="fieldName"
+    class="form-label select-label mt-4"
+    >{{ label }}</label
+  >
+  <select
+    class="form-select form-select-lg select-padrao"
+    [name]="fieldName"
+    [id]="fieldName"
+    [disabled]="carregando"
+    [(ngModel)]="value"
+    (change)="handleEvent($event)">
+    <option *ngIf="carregando">Carregando...</option>
+    <option *ngFor="let dado of dadosLista$ | async" [value]="dado.id">{{ dado.descricao }}</option>
+  </select>
+</div>

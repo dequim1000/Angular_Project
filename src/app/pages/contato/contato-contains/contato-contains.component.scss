@@ -1,0 +1,40 @@
+.contato {
+  &-mapa {
+    max-width: 100%;
+  }
+  &-info {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    text-align: center;
+  }
+  &-container {
+    display: flex;
+    justify-content: center;
+  }
+  &-title {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 0px;
+    white-space: nowrap;
+  }
+  &-subtitle {
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 16px;
+  }
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 13px;
+
+    &-text {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 16px;
+      margin-left: 1rem;
+    }
+  }
+}

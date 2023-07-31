@@ -1,0 +1,97 @@
+<div class="footer d-flex justify-content-center">
+  <div class="container-lg row footer-menu p-0">
+    <div class="col-12 d-flex justify-content-between mt-4 px-lg-0">
+      <div class="logo-energy">
+        <img width="193px" height="29px" src="assets/images/logo_energy.png" alt="" />
+      </div>
+      <div class="botao-scroll-up" (click)="scrollToTop()">
+        <span>
+          <img class="img-botao-scroll-up" width="14px" height="14px" src="assets/icons/icon_arrow_up.svg" alt="" />
+          <img
+            class="img-botao-scroll-up-dark"
+            width="14px"
+            height="14px"
+            src="assets/icons/icon_arrow_up_dark.svg"
+            alt="" />
+        </span>
+      </div>
+    </div>
+    <div class="separador px-lg-0 mt-4">
+      <div class="separador-pequeno"></div>
+      <div class="separador-grande"></div>
+    </div>
+    <div class="menu-opcoes col-12 d-flex justify-content-between mt-4 px-lg-0">
+      <div class="opcao col-7 col-sm-6 col-lg-4">
+        <ul>
+          <li>
+            <a class="cool-link" target="_blank" href="https://tpicap.com/tpicap/privacy-notice">Privacy Notice</a>
+          </li>
+          <li><a class="cool-link" target="_blank" href="https://tpicap.com/tpicap/cookie-notice">Cookie Notice</a></li>
+          <li>
+            <a class="cool-link" routerLink="/home/sitemap" routerLinkActive="selected">Site map</a>
+          </li>
+          <li><a class="cool-link" target="_blank" href="https://tpicap.com/tpicap/accessibility">Accessibility</a></li>
+          <div class="d-block d-lg-none">
+            <li>
+              <a target="_blank" href="https://tpicap.com/tpicap/legal-and-regulatory-terms-use" class="cool-link"
+                >Termo de Uso</a
+              >
+            </li>
+            <li><a target="_blank" href="https://tpicap.com/tpicap/disclaimer" class="cool-link">Disclaimer</a></li>
+          </div>
+        </ul>
+      </div>
+      <div class="opcao col-5 d-none d-lg-block">
+        <ul>
+          <li>
+            <a target="_blank" href="https://tpicap.com/tpicap/legal-and-regulatory-terms-use" class="cool-link"
+              >Termo de Uso</a
+            >
+          </li>
+          <li><a target="_blank" href="https://tpicap.com/tpicap/disclaimer" class="cool-link">Disclaimer</a></li>
+        </ul>
+      </div>
+      <div class="opcao col-5 col-sm-6 col-md-3">
+        <div class="row">
+          <!-- TODO: A ICap ainda não possui instagram, descomentar e adicionar novo link quando for criado -->
+          <!-- <div class="col-4 col-lg-2">
+                        <a
+                            href="https://www.instagram.com/tpicap/"
+                            target="_blank"
+                        >
+                            <img
+                                width="24px"
+                                height="24px"
+                                src="assets/icons/icon_instagram.png"
+                                alt=""
+                            />
+                        </a>
+                    </div> -->
+          <div class="col-4 col-lg-2">
+            <a href="https://twitter.com/TPICAPGroupPLC" target="_blank">
+              <img width="24px" height="24px" src="assets/icons/twitter_icon.svg" alt="Icone do twitter" />
+            </a>
+          </div>
+          <div class="col-4 col-lg-8">
+            <a href="https://www.linkedin.com/company/tullettenergy/" target="_blank">
+              <img width="24px" height="24px" src="assets/icons/icon_linkedin.png" alt="Icone LinkedIn" />
+            </a>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="endereco">
+            R. São Tomé, 86, 21 andar,<br />
+            Vila Olimpia, São Paulo<br />
+            CEP: 04551-080 Brasil
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="separador px-lg-0 mt-4">
+      <div class="separador-pequeno"></div>
+    </div>
+    <div class="col-12 mt-4 d-flex flex-row-reverse px-lg-0">
+      <div class="text-right copytight">Copyright © {{ currentYear }} TP ICAP</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<app-banner-video [bannerVideo]="(homePage$ | async)?.bannerVideo" [isFullScreen]="true"></app-banner-video>
+<app-produtos-servicos [produtosServicos]="(homePage$ | async)?.produtosServico"></app-produtos-servicos>
+<div class="video">
+  <video
+    class="video-play"
+    width="100%"
+    height="100%"
+    controls=""
+    muted=""
+    playsinline=""
+    [src]="'assets/videos/Video_Apresentacao_Tullett.mp4'"
+    loop="loop"></video>
+</div>

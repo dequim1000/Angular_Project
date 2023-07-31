@@ -1,0 +1,48 @@
+{
+  "bannerVideo": {
+    "titulo": "Quem somos",
+    "textoModal": "Operando principalmente como intermediário nos setores financeiro e de energia de atacado, a Tullett Prebon facilita as atividades comerciais de seus clientes, em particular bancos comerciais e de investimento. As áreas de produtos incluem: Títulos de Renda Fixa e seus derivativos, Derivativos de Taxas de Juros, Produtos de Tesouraria, Ações e Energia e Commodities.",
+    "link": "https://cdn.jwplayer.com/videos/RpcpTGco-Mm8CL0x4.mp4"
+  },
+  "produtosServico": {
+    "tituloProdutos": "Produtos e Serviços",
+    "cards": [
+      {
+        "titulo": "Energia",
+        "img": "assets/images/produtos_energia.webp",
+        "url": "/home/produtos/energia"
+      },
+      {
+        "titulo": "Gás",
+        "img": "assets/images/produtos_gas.webp",
+        "url": "/home/produtos/gas"
+      },
+      {
+        "titulo": "Compensação de Emissões",
+        "img": "assets/images/wild_cat.webp",
+        "url": "/home/produtos/emissao"
+      }
+    ]
+  },
+  "sessaoInformativa": {
+    "titulo": "Nosso papel",
+    "descricao": "Atuar como líder mundial na intermediação de operações nos mercados financeiro, energia, gás e emissões, buscando maximizar valores para as atividades comerciais de nossos clientes.",
+    "urlImg": "/assets/images/home_sessao_informativa.webp"
+  },
+  "citacao": {
+    "paragrafos": [
+      {
+        "paragrafo": "Conectamos clientes de maneira transparente e responsável nos mercados financeiros, de energia e de commodities em todo do mundo."
+      },
+      {
+        "paragrafo": "Ao combinar o know-how de nosso time com as tecnologias mais recentes, melhoramos a transparência dos preços, a execução comercial das operações, a liquidez e o fluxo de informações dos mercados."
+      },
+      {
+        "paragrafo": "A divisão de Energy & Commodities é única em seu profissionalismo – Com inovação incessante e compromisso com o desenvolvimento dos mercados de energia, com o aumento da liquidez e com o aperfeiçoamento da gestão de riscos."
+      },
+      {
+        "paragrafo": "A Tullett Prebon atua apenas como intermediária conectando comprador e vendedor. Não existe interesse proprietário em nenhum negócio ou posição nos mercados onde atuamos em nenhuma parte do mundo, mantendo o foco exclusivamente na qualidade da informação, na descoberta de preços e na liquidez comercial que é levada para cada cliente."
+      }
+    ]
+  }
+}

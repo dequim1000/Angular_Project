@@ -1,0 +1,20 @@
+<div class="container mt-5 mb-5">
+  <div class="row" [ngClass]="{ 'flex-row-reverse': posicao === 'left' }">
+    <div class="col-12 col-lg-7 p-md-0 p-lg-0">
+      <h2 class="sessao-informativa-title">
+        {{ sessaoInformativa?.titulo }}
+      </h2>
+      <app-separador></app-separador>
+      <div class="mt-4 sessao-informativa-body">
+        <p>
+          {{ sessaoInformativa?.descricao }}
+        </p>
+      </div>
+    </div>
+    <div
+      class="col-12 col-lg-5 p-md-0"
+      [ngClass]="{ 'pe-lg-5 ps-lg-0': posicao === 'left', 'ps-lg-5 pe-lg-0': posicao === 'right' }">
+      <img class="sessao-informativa-img" [src]="sessaoInformativa?.urlImg" alt="Imagem da sessão informativa" />
+    </div>
+  </div>
+</div>

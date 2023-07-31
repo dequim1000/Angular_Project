@@ -1,0 +1,36 @@
+{
+  "bannerImage": {
+    "titulo": "Contato",
+    "link": "assets/images/contatoBanner.png"
+  },
+  "contatos": [
+    {
+      "nome": "GONZALO TERRACINI",
+      "produto": "Energia",
+      "telefone": "+55 11 2111 4846",
+      "celular": "+55 11 99306 3748",
+      "email": "gterracini@tullettprebon.com.br"
+    },
+    {
+      "nome": "LETICIA SALLES",
+      "produto": "Compensação de Emissões",
+      "telefone": "+55 11 2111 4852",
+      "celular": "+55 11 97953 1121",
+      "email": "leticia.salles@tullettprebon.com.br"
+    },
+    {
+      "nome": "DEMÉTRIUS SALVADOR",
+      "produto": "Energia",
+      "telefone": "+55 11 2111 4854",
+      "celular": "+55 11 97142 3122",
+      "email": "dsdeoliveira@tullettprebon.com.br"
+    },
+    {
+      "nome": "LUCAS OLIVEIRA",
+      "produto": "Energia",
+      "telefone": "+55 11 2111 4844",
+      "celular": "+55 11 94026 9343",
+      "email": "lvinicius@tullettprebon.com.br"
+    }
+  ]
+}

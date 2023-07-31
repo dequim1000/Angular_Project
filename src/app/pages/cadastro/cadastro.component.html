@@ -1,0 +1,37 @@
+<app-stepper
+  [textoStep1]="'1'"
+  [textoStep2]="'2'"
+  [textoStep3]="'3'"
+  [labelStep1]="'Dados da Empresa'"
+  [labelStep2]="'Financeiro e Autorizações'"
+  [labelStep3]="'Documentos'"
+  [selecionadoStep1]="selecionadoStep1"
+  [selecionadoStep2]="selecionadoStep2"
+  [selecionadoStep3]="selecionadoStep3"
+  (onClickStep1)="clickStep1()"
+  (onClickStep2)="clickStep2()"
+  (onClickStep3)="clickStep3()"
+  [enviando]="enviando">
+</app-stepper>
+
+<div *ngIf="enviando" class="d-flex justify-content-center align-items-center cadastro-carregando">
+  <app-spinner [label]="'Enviando cadastro, aguarde...'"></app-spinner>
+</div>
+
+<div *ngIf="!enviando" class="row row-cadastro">
+  <app-cadastro-step1 *ngIf="selecionadoStep1" [model]="model"></app-cadastro-step1>
+  <app-cadastro-step2 *ngIf="selecionadoStep2" [model]="model"></app-cadastro-step2>
+  <app-cadastro-step3 *ngIf="selecionadoStep3" [model]="model"></app-cadastro-step3>
+
+  <app-stepper-footer
+    [selecionadoStep1]="selecionadoStep1"
+    [selecionadoStep2]="selecionadoStep2"
+    [selecionadoStep3]="selecionadoStep3"
+    (onClickStep1)="clickStep1()"
+    (onClickStep2)="clickStep2()"
+    (onClickStep3)="clickStep3()"
+    (onClickBotaoFinalizar)="clickFinalizar()">
+  </app-stepper-footer>
+</div>
+
+<app-modal-aviso (onClose)="cadastroFinalizado()"> </app-modal-aviso>

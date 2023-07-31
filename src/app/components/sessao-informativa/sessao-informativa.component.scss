@@ -1,0 +1,26 @@
+.sessao-informativa {
+  &-title {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 48px;
+    color: #262626;
+  }
+  &-body {
+    width: 100%;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    white-space: pre-line;
+  }
+  &-img {
+    width: 100%;
+    height: 437px;
+    object-fit: cover;
+    @media (max-width: 992px) {
+      height: 320px;
+    }
+  }
+}
